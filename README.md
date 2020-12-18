@@ -14,6 +14,6 @@ Download the jar of the project. Rename it to `mu-runner.java`. To use this tool
 - Create a folder named `project-src` which contains all of original src files of your project.
 - Create a folder named `project-test-classes` which contains compiled tests. the test should be use JUnit4.
 - [optional] A folder called `jars` contains all JAR file dependencies which need for running your tests.
-- now run the tool like this:
+- now run the tool like this: <br>
 `java -jar mu-runner.jar -tests org.exmple.tests.TestClass1 org.exmple.tests.TestClass2
 `

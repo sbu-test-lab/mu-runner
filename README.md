@@ -20,5 +20,5 @@ Download the jar of the project. Rename it to `mu-runner.java`. To use this tool
 The output of the tool is something like this: 
 <br/>
 <br/>
-![Screenshot](docs/output.png)
+     ![Screenshot](docs/output.png)
 

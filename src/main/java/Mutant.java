@@ -98,7 +98,7 @@ public class Mutant {
     }
 
     public void incNumberOfTestFails(int i) {
-        this.numberOfTestFails=this.numberOfTestRun+i;
+        this.numberOfTestFails=this.numberOfTestFails+i;
     }
 
     public int getNumberOfTestFails() {

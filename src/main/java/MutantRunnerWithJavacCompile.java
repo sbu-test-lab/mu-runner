@@ -1,11 +1,10 @@
-import com.google.common.net.UrlEscapers;
 import dnl.utils.text.table.TextTable;
 import org.apache.commons.io.FileUtils;
 import org.junit.internal.TextListener;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
+import sbu.testlab.mutants.runner.Mutant;
 
-import javax.tools.JavaCompiler;
 import javax.tools.ToolProvider;
 import java.io.File;
 import java.io.IOException;
@@ -16,12 +15,12 @@ import java.util.*;
 
 import static org.apache.commons.io.FileUtils.listFiles;
 
-public class MutantRunner {
+public class MutantRunnerWithJavacCompile {
     public static File mutantDir = new File("mutants");
     public static File tempSrcDir = new File("temp-src");
     public static File tempClassesDir = new File("temp-classes");
     private static File projectSrcDir = new File("project-src");
-    private static File projectTestClassesDir = new File("project-test-classes");
+    private static File projectTestClassesDir = new File("test-classes");
     private static File jarsDependencyDir = new File("jars");
 
     static List<Mutant> mutants = new ArrayList<Mutant>();

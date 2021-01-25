@@ -1,33 +1,42 @@
+package sbu.testlab.mutants.runner;
+
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * a mutant is a java file with the following name
  *  <pre>package.name.className_type_number.java</pre>
  */
 public class Mutant {
+    List<File> files=new ArrayList<>();
     File file;
     String type;
     String number;
     String pathAndFileName;
     private String filename;
-    //killed, not-verify, live, compile-error
+    //killed, not-verify, live, compile-error, junit-error
     private String status="not-verify";
     private int numberOfTestRun;
     private int numberOfTestFails;
 
     public Mutant(File file) {
-        this.file = file;
+        this.file=file;
         extractTypeAndNumber();
     }
 
     private void extractTypeAndNumber() {
         String name=file.getName();
-        String nameWithoutExtension=name.substring(0,name.lastIndexOf('.'));
+        String nameWithoutExtension=name;
+        if(!file.isDirectory())
+            nameWithoutExtension=name.substring(0,name.lastIndexOf('.'));
         this.number=nameWithoutExtension.substring(nameWithoutExtension.lastIndexOf('_')+1);
         String nameWithoutNumber=nameWithoutExtension.substring(0,name.lastIndexOf('_'));
         this.type=nameWithoutNumber.substring(nameWithoutNumber.lastIndexOf('_')+1);
         String onlyName=nameWithoutNumber.substring(0,nameWithoutNumber.lastIndexOf('_'));
-        this.pathAndFileName=onlyName.replaceAll("\\.","/")+".java";
+        this.pathAndFileName=onlyName.replaceAll("\\.","/");
+        if(!file.isDirectory())
+            this.pathAndFileName=this.pathAndFileName+".java";
         if(this.pathAndFileName.contains("/"))
             this.filename=this.pathAndFileName.substring(this.pathAndFileName.lastIndexOf('/')+1);
         else
@@ -35,11 +44,11 @@ public class Mutant {
     }
 
     public String getFileName(){
-        return file.getName();
+        return this.filename;
     }
 
     public String getSimpleName(){
-        return this.filename+ " - "+this.type+" - "+this.number;
+        return this.filename+ "-"+this.type+"-"+this.number;
     }
 
     public File getFile() {

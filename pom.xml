@@ -73,7 +73,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>sbu.testlab.mutants.runner.MavenBasedMutantRunnerLauncher</mainClass>
+                            <mainClass>sbu.testlab.mutants.runner.maven.MavenBasedMutantRunnerLauncher</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

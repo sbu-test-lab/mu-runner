@@ -1,4 +1,4 @@
-# java-mutant-runner
+# MuRunner: a Java Mutants Runner
 Seed a bug in one of your java class files (called a mutant). Then, make a list of these buggy java classes (mutants). Now you can use `java-mutant-runner` for compiling and running tests:
 * `java-mutant-runner` replaces each buggy file (mutant) with original java source file.
 * After replacing a buggy file, `java-mutant-runner` compiles our project.

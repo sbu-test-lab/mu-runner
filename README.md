@@ -17,8 +17,7 @@ Download the jar of the project with name of `mu-runner.java`. To use this tool 
 - [optional] A folder called `jars` contains all JAR file dependencies which need for running your tests.
 - now run the tool like this: <br/>
 `java -jar mu-runner.jar -tests org.exmple.tests.TestClass1 org.exmple.tests.TestClass2` 
-<br/>
-The output of the tool is something like this: 
+- The output of the tool is something like this: 
 
 ![Screenshot](../main/docs/output.png?raw=true)
 

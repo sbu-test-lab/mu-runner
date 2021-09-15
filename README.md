@@ -46,3 +46,5 @@ The following table shown the descriptions of these parameters and options:
 | `-project`| `--maven-project` | Your maven-based project directory. |
 |  `-src-dir`| `--source-directory` | src directory relative to root of maven project (or maven module) like `/src/main/java/` |
 | `-tests`| `--compiled-tests` | Your compiled tests directory.The directory containing compiled test classes |
+### Example and case study
+To find out more details on how we use `OCov4J` and `Murunner` in some real example and case studies, you can refer to [OCov4 on Real Cases](https://github.com/sbu-test-lab/object-coverage-case-studies") contining many examples.

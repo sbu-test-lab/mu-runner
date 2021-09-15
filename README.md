@@ -36,13 +36,13 @@ Usage: <MuRunner.jar>
 ```
 The following table shown the descriptions of these parameters and options:
 
-| Parameter/Option | Description |
-| --- | ----------- |
-| [Tests...] | One ore more test class to run. You should specify the Name of the test class in Junit. |
-| -jars,--test-dependencies-jars | A list of directories containing Jars file dependency for running tests |
-| -m, --mutants | The mutants directory. A mutant is a java file with the following name `package.name.className_type_number.java` use `[type]` and `[number]` in the file name for categorize and number your mutants. |
-| -maven, --maven-home | The Maven home directory |
-| -module, --maven-module | Your maven module directory relative path. In multi-module maven project you can specify just one of the module as your project |
-| -project, --maven-project | Your maven-based project directory. |
-|  -src-dir, --source-directory | src directory relative to root of maven project (or maven module) like `/src/main/java/` |
-| -tests, --compiled-tests | Your compiled tests directory.The directory containing compiled test classes |
+| Option abv. |Option in long format | Description |
+| -- | ---- | ----------- |
+| [Tests...] | - | One ore more test class to run. You should specify the Name of the test class in Junit. |
+| `-jars` | `--test-dependencies-jars` | A list of directories containing Jars file dependency for running tests |
+| `-m`| `--mutants` | The mutants directory. A mutant is a java file with the following name `package.name.className_type_number.java` use `[type]` and `[number]` in the file name for categorize and number your mutants. |
+| `-maven`| `--maven-home` | The Maven home directory |
+| `-module`| `--maven-module` | Your maven module directory relative path. In multi-module maven project you can specify just one of the module as your project |
+| `-project`| `--maven-project` | Your maven-based project directory. |
+|  `-src-dir`| `--source-directory` | src directory relative to root of maven project (or maven module) like `/src/main/java/` |
+| `-tests`| `--compiled-tests` | Your compiled tests directory.The directory containing compiled test classes |
